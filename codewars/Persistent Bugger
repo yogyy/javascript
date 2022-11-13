@@ -1,0 +1,17 @@
+//Solution I
+function persistence(num) {
+   let i = 0;
+   while (num.toString().length !== 1) {
+     num = num.toString().split("").reduce((a,b)=>a*b);
+     i++;
+   }
+   return i;
+}
+
+
+//Solution II
+function persistence (num) {
+  return `${num}`.length > 1 
+    ? 1 + persistence(`${num}`.split('').reduce((a, b) => a * b)) 
+    : 0;
+}
