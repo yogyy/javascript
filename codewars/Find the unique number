@@ -1,0 +1,3 @@
+const findUniq = (a,s=a.sort())=>s[s[1]-s[0]?0:s.length-1]
+
+//Sort the array, check if first two elements are equal - if they are, unique is last element, otherwise it's the first element
