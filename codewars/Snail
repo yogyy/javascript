@@ -1,0 +1,33 @@
+  snail = function(array) {
+    let finalArray = [];
+    while(array.length) {
+    finalArray.push(...array.shift())
+    array.map(row => finalArray.push(row.pop()))
+    array.reverse().map(row => row.reverse())
+    }
+  return finalArray
+}
+
+So lets break down some possible solutions
+
+possibility 1
+
+  create a variable for the final array
+
+  loop through the parent array - while array still has items in it
+
+     * get the first row (first array in the array)
+     * get the items at the end of each array (right side) 
+     * get the bottom row from end to front (bottom row reversed)
+     * get the items at the beginning of the arrays (left side)
+
+possibility 2
+
+  create a variable for the final array
+
+  loop through the parent array - while array still has items in it
+
+    * get the fist row
+    * get the last item in each array
+    * reverse the parent array and each array in the parent array
+ -
