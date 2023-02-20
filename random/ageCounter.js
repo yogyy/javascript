@@ -9,5 +9,4 @@ function ageCounter(birthdate) {
   return age;
 }
 
-
-console.log(ageCounter('2000-02-02'));
+console.log(ageCounter("2003-02-02"));
