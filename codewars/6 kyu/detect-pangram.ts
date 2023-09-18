@@ -1,4 +1,4 @@
-function isPangram(string) {
+function isPangram(string: string): boolean {
   let str = string
     .split(" ")
     .join("")
@@ -7,3 +7,6 @@ function isPangram(string) {
     .split("");
   return [...new Set(str)].length == 26;
 }
+
+
+// A pangram is a sentence that contains every letter of the alphabet at least once
